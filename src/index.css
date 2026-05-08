@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@layer base{
+    body{
+        @apply text-textPrimary;
+    }
+}
+
 @theme {
     --color-primary: #16171C;
     --color-textPrimary: #E5E5E5;
