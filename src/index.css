@@ -9,4 +9,6 @@
 @theme {
     --color-primary: #16171C;
     --color-textPrimary: #E5E5E5;
+    --color-accent: #1e1f24;
+    --color-hover: #8ec5ff;
 }
