@@ -29,11 +29,11 @@ function ProjectsList() {
         url="https://apps.apple.com/app/id6746861813"
       />
       <ProjectCard
-        title="Staywired"
-        description="Website for the StayWired product integrated with full crud, checkout
-          and an admin dashboard for logistics."
-        date="12/25"
-        url="https://www.staywired.dk"
+        title="Ikast Fatih Camii"
+        description="Website for the mosque, member managamenet, payment tracking in dashboard as well
+          as front facing landing page for visistors to see coming events and services."
+        date="11/25"
+        url="https://www.ikastmoske.dk/"
       />
       <ProjectCard
         title="FullPowerKegels"
