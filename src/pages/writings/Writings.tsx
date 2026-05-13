@@ -1,7 +1,9 @@
+import PageLayout from "../../components/PageLayout";
+
 function Writings() {
   return (
     <>
-      <h1>Writings</h1>
+      <PageLayout title="Writings" />
     </>
   );
 }

@@ -29,39 +29,48 @@ function Home() {
 
   return (
     <>
-      <section className="relative flex flex-col min-[1000px]:flex-row  min-[1000px]:items-start items-center min-[1000px]:justify-center h-screen pt-30">
-        <div className="w-full max-w-lg text-left">
+      <section
+        className="relative flex flex-col min-[1000px]:flex-row 
+      min-[1000px]:items-start items-center min-[1000px]:justify-center h-screen pt-30"
+      >
+        <div className="w-full max-w-160 text-left">
           <h1 className=" text-2xl">Metin Özkaya</h1>
 
           <h2 className=" mt-8 whitespace-normal">
-            Desiging Websites. Crafting apps and hoping to impress the folks at
-            Reportability.
+            Desiging Websites. Crafting apps for 2.5 years and hoping to impress
+            the good folks at Reportability.
           </h2>
           <ul className="mt-6  space-y-2">
             <li>
               <button
                 ref={buttonRef}
-                className="hover:text-blue-300 hover:cursor-pointer"
-                onClick={handleClick}
+                className="hover:text-hover hover:cursor-pointer"
+                onClick={() => {
+                  navigate("/projects");
+                }}
               >
                 Projects
               </button>
             </li>
             <li>
-              <Link to="/hello">Resume</Link>
+              <Link to="/resume" className="hover:text-hover">
+                Resume
+              </Link>
             </li>
             <li>
-              <Link to="/writings">Writings</Link>
+              <Link to="/writings" className="hover:text-hover">
+                Writings
+              </Link>
             </li>
           </ul>
         </div>
         {/* alter to md */}
-        {isOpen && window.innerWidth >= 1000 && (
+        {/* {isOpen && window.innerWidth >= 1000 && (
           <ProjectsConnector
             {...{ buttonX, buttonY, divX, divTop, divWidth, divHeight }}
           />
-        )}
-        {isOpen && <Projects columnRef={columnRef} />}
+        )} */}
+        {/* {isOpen && <Projects columnRef={columnRef} />} */}
       </section>
     </>
   );
