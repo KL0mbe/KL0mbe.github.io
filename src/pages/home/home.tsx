@@ -1,36 +1,33 @@
-import ProjectsConnector from "./components/ProjectConnector";
 import { useCoordinates } from "../../hooks/useCoordinates";
+import { PiMailboxFill } from "react-icons/pi";
 import { Link, useNavigate } from "react-router-dom";
+import PacoClock from "../../components/PacoClock";
 import { RxGithubLogo } from "react-icons/rx";
-import Projects from "./components/Projects";
 import { FaLinkedin } from "react-icons/fa";
 import { useState } from "react";
-import ProjectCard from "../projects/components/ProjectCard";
-import { HiExternalLink } from "react-icons/hi";
-import HomeCard from "./components/HomeCard";
 
 function Home() {
-  const [isOpen, setIsopen] = useState(false);
+  const [isOpen, _setIsopen] = useState(false);
   const navigate = useNavigate();
   const {
     buttonRef,
-    columnRef,
-    buttonX,
-    buttonY,
-    divX,
-    divTop,
-    divWidth,
-    divHeight,
+    // columnRef,
+    // buttonX,
+    // buttonY,
+    // divX,
+    // divTop,
+    // divWidth,
+    // divHeight,
   } = useCoordinates(isOpen);
 
-  function handleClick() {
-    // alter to md
-    if (window.innerWidth >= 1000) {
-      setIsopen(!isOpen);
-    } else {
-      navigate("/projects");
-    }
-  }
+  // function handleClick() {
+  //   // alter to md
+  //   if (window.innerWidth >= 1000) {
+  //     setIsopen(!isOpen);
+  //   } else {
+  //     navigate("/projects");
+  //   }
+  // }
 
   return (
     <>
@@ -55,10 +52,10 @@ function Home() {
           </h2>
           <section
             className="
-           flex justify-between overflow-x-scroll
+           flex justify-between
            mt-10  space-y-2 h-70"
           >
-            <div className="w-48 shrink-0">
+            <div className="w-48">
               <button
                 ref={buttonRef}
                 className="hover:text-hover hover:cursor-pointer"
@@ -68,20 +65,9 @@ function Home() {
               >
                 <div className="text-left underline">Projects</div>
               </button>
-              <div className="mt-6">
-                <HomeCard
-                  title="Staywired"
-                  description="E-Commerce site built from scratch"
-                  url="https://www.staywired.dk/"
-                />
-                <HomeCard
-                  title="Full Power Kegels"
-                  description="Maintainer and implementer for a year. Build in Flutter"
-                  url="https://apps.apple.com/app/id6449595806"
-                />
-              </div>
+              <div className="mt-6"></div>
             </div>
-            <div className="w-48 shrink-0">
+            <div className="w-48">
               <Link to="/resume" className="hover:text-hover underline">
                 Resume
               </Link>
@@ -92,18 +78,28 @@ function Home() {
               </Link>
             </div>
           </section>
-          <div className="mt-8 flex gap-4">
-            <a href="https://github.com/KL0mbe" target="_blank">
-              <RxGithubLogo size={22} className="hover:text-hover" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/metin-%C3%B6zkaya-184603366/"
-              target="_blank"
-            >
-              <FaLinkedin size={22} className="hover:text-hover" />
-            </a>
-          </div>
+          <section>
+            <h2>Connect</h2>
+            <div className="mt-2 flex gap-4">
+              <p>You can reach me at</p>
+              <a href="https://github.com/KL0mbe" target="_blank">
+                <RxGithubLogo size={22} className="hover:text-hover" />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/metin-%C3%B6zkaya-184603366/"
+                target="_blank"
+              >
+                <FaLinkedin size={22} className="hover:text-hover" />
+              </a>
+
+              <a href="mailto:hello@klombe.com" className="underline">
+                <PiMailboxFill size={22} className="hover:text-hover" />
+              </a>
+            </div>
+          </section>
         </div>
+
         {/* alter to md */}
         {/* {isOpen && window.innerWidth >= 1000 && (
           <ProjectsConnector
@@ -112,6 +108,17 @@ function Home() {
         )}
         {isOpen && <Projects columnRef={columnRef} />} */}
       </section>
+      <footer className="border-t border-secondary text-textSecondary text-sm flex justify-center ">
+        <div className="flex justify-between h-12 items-center w-160 mx-8">
+          <p className="text-left">
+            So the day started poorly, thats no excuse to end it as such.
+          </p>
+          <div className="flex gap-2 items-center">
+            2026
+            <PacoClock />
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

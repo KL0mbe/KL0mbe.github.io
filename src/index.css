@@ -8,7 +8,9 @@
 
 @theme {
     --color-primary: #16171C;
+    --color-secondary: #2E2E2E;
     --color-textPrimary: #E5E5E5;
+    --color-textSecondary: #707070;
     --color-accent: #1e1f24;
     --color-hover: #8ec5ff;
 }

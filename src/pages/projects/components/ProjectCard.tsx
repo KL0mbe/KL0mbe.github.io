@@ -10,6 +10,7 @@ type ProjectData = {
 function ProjectCard({ title, description, url, date }: ProjectData) {
   return (
     <>
+      {/* add stack to each card */}
       <a href={url} target="_blank" rel="noopener noreferrer">
         <div className="d text-left bg-accent p-4 mt-2 rounded-lg max-w-160 group">
           <div className="flex justify-between">

@@ -23,23 +23,11 @@ function ProjectsList() {
         url="https://apps.apple.com/app/id6449595806"
       />
       <ProjectCard
-        title="VibeAlign"
-        description="Meditation & Manifestation App. Primary developer, and maintainer for half a year"
-        date="5/25-9/25"
-        url="https://apps.apple.com/app/id6746861813"
-      />
-      <ProjectCard
         title="Ikast Fatih Camii"
         description="Website for the mosque, member managamenet, payment tracking in dashboard as well
-          as front facing landing page for visistors to see coming events and services."
+            as front facing landing page for visistors to see coming events and services."
         date="11/25"
         url="https://www.ikastmoske.dk/"
-      />
-      <ProjectCard
-        title="FullPowerKegels"
-        description="An App For developing your kegels with kegel excercises, primary maintainer"
-        date="10/24-11/25"
-        url="https://apps.apple.com/app/id6449595806"
       />
       <ProjectCard
         title="VibeAlign"
