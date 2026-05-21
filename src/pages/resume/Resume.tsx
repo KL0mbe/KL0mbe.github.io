@@ -12,7 +12,7 @@ function Resume() {
           <div className="flex justify-between">
             <h1 className="text-[16px] font-bold">METIN ÖZKAYA</h1>
             <a
-              href="/src/files/Resumé.pdf"
+              href="/files/Resumé.pdf"
               target="_blank"
               className="hover:text-hover flex"
             >
