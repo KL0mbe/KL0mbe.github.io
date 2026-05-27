@@ -3,7 +3,10 @@ import PageLayout from "../../components/PageLayout";
 
 function ProjectsPage() {
   return (
-    <PageLayout title="Projects">
+    <PageLayout
+      title="Projects"
+      quote="Bad days will come and go, do not let your virtue travel with them"
+    >
       <ProjectsList />
     </PageLayout>
   );

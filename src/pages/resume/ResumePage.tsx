@@ -1,12 +1,15 @@
 import ResumeSection from "./components/ResumeSection.tsx";
 import PageLayout from "../../components/PageLayout.tsx";
-import BulletPoint from "./components/BulletPoint.tsx";
 import ResumeTitle from "./components/ResumeTitle.tsx";
+import BulletPoint from "./components/BulletPoint.tsx";
 import { HiExternalLink } from "react-icons/hi";
 
-function Resume() {
+function ResumePage() {
   return (
-    <PageLayout title="Resume">
+    <PageLayout
+      title="Resume"
+      quote="The problem with excuses is, they can always be found"
+    >
       <section className="bg-accent text-left p-3 rounded-lg space-y-3 text-sm">
         <div>
           <div className="flex justify-between">
@@ -124,4 +127,4 @@ function Resume() {
   );
 }
 
-export default Resume;
+export default ResumePage;

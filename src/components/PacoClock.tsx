@@ -61,9 +61,7 @@ function PacoClock() {
             className="absolute p-2 border border-secondary bg-primary rounded -top-11 left-1/2  text-sm
   whitespace-nowrap"
           >
-            <p className="text-textPrimary">
-              {time.toUTCString().slice(0, -4)}
-            </p>
+            <p className="text-textPrimary">{time.toString().slice(0, 25)}</p>
           </span>
         )}
       </div>
