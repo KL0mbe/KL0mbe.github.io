@@ -1,35 +1,11 @@
-import { useCoordinates } from "../../hooks/useCoordinates";
-import { Link, useNavigate } from "react-router-dom";
 import MyFooter from "../../components/MyFooter";
 import { HiExternalLink } from "react-icons/hi";
 import { PiMailboxFill } from "react-icons/pi";
 import { RxGithubLogo } from "react-icons/rx";
 import { FaLinkedin } from "react-icons/fa";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
-  const [isOpen, _setIsopen] = useState(false);
-  const navigate = useNavigate();
-  const {
-    buttonRef,
-    // columnRef,
-    // buttonX,
-    // buttonY,
-    // divX,
-    // divTop,
-    // divWidth,
-    // divHeight,
-  } = useCoordinates(isOpen);
-
-  // function handleClick() {
-  //   // alter to md
-  //   if (window.innerWidth >= 1000) {
-  //     setIsopen(!isOpen);
-  //   } else {
-  //     navigate("/projects");
-  //   }
-  // }
-
   return (
     <>
       <section
@@ -42,7 +18,7 @@ function Home() {
           <h1 className=" text-2xl">Metin Özkaya</h1>
 
           <h2 className=" mt-8 whitespace-normal">
-            Designing Websites, developing apps and "Hello Worlding" since 2023.
+            Designing Websites, developing apps and Hello Worlding since 2023.
             <br />
             <br />
             I've built and maintained multiple mobile apps, E-commerce websites
@@ -57,70 +33,42 @@ function Home() {
             className="
            flex justify-between mt-10"
           >
-            <div className="w-48 min-w-30">
-              <button
-                // change to link if ref is no longerneeded
-                ref={buttonRef}
-                className="hover:text-hover hover:cursor-pointer"
-                onClick={() => navigate("/projects")}
-              >
+            <div className="w-74 min-w-30">
+              <Link to="/projects" className="hover:text-hover">
                 <div className="text-left underline">Projects</div>
-              </button>
-              <div className="mt-6 flex flex-col">
+              </Link>
+              <div className="mt-6 flex flex-col [&_p]:text-textSecondary">
                 <div className="min-h-18">
                   <a
                     href="https://apps.apple.com/app/id6449595806"
                     target="_blank"
-                    className="underline"
                   >
-                    <div className="flex hover:text-hover">
+                    <div className="flex underline hover:text-hover">
                       Full Power kegels <HiExternalLink size={18} />
                     </div>
                   </a>
-                  <p className="mt-2 text-textSecondary ">
-                    Excercise app(Maintainer)
-                  </p>
+                  <p>Excercise app(Maintainer)</p>
                 </div>
                 <div className="min-h-18">
-                  <a
-                    href="https://www.staywired.dk"
-                    target="_blank"
-                    className="underline"
-                  >
-                    <div className="flex hover:text-hover">
+                  <a href="https://www.staywired.dk" target="_blank">
+                    <div className="flex underline hover:text-hover">
                       StayWired <HiExternalLink size={18} />
                     </div>
                   </a>
-                  <p className="text-textSecondary">
-                    E-Commerce site from scratch
-                  </p>
+                  <p>E-Commerce site from scratch</p>
                 </div>
                 <div className="min-h-18">
-                  <a
-                    href="https://github.com/KL0mbe/AudiFile"
-                    target="_blank"
-                    className="underline"
-                  >
-                    <div className="flex hover:text-hover">
+                  <a href="https://github.com/KL0mbe/AudiFile" target="_blank">
+                    <div className="flex underline hover:text-hover">
                       AudiFile <HiExternalLink size={18} />
                     </div>
                   </a>
-                  <p className="text-textSecondary">
-                    play and edit custom files with full control
-                  </p>
+                  <p>play and edit custom files with full control</p>
                 </div>
               </div>
             </div>
-            <div className="w-48 min-w-20 flex flex-col space-y-18">
-              <Link to="/resume" className="hover:text-hover underline">
-                Resume
-              </Link>
-              <Link to="/about" className="hover:text-hover underline mt-6 ">
-                About
-              </Link>
-            </div>
 
-            <div className="w-48 min-w-30">
+            <div className="w-74 min-w-30">
               <Link to="/writings" className="hover:text-hover underline">
                 Writings
               </Link>
@@ -137,40 +85,34 @@ function Home() {
               </div>
             </div>
           </section>
-          {/* <div>
-            The content to make someone, anyone the best programmer exists
-            freely on the internet for all to access. Improving this craft and
-            getting as close to achieving that goal, is the journey I've decided
-            to embark upon.
-          </div> */}
-          <section className="mt-10">
-            <h2>Connect</h2>
-            <div className="mt-2 flex gap-4">
-              <p>You can reach me at</p>
-              <a href="https://github.com/KL0mbe" target="_blank">
-                <RxGithubLogo size={22} className="hover:text-hover" />
-              </a>
+          <div className="mt-4">
+            You can read more{" "}
+            <Link to="/about" className="hover:text-hover underline">
+              about
+            </Link>{" "}
+            me or check out my{" "}
+            <Link to="/resume" className="hover:text-hover underline">
+              resume
+            </Link>
+          </div>
+          <section className="mt-10 flex gap-4">
+            <p>Reach me at</p>
+            <a href="https://github.com/KL0mbe" target="_blank">
+              <RxGithubLogo size={22} className="hover:text-hover" />
+            </a>
 
-              <a
-                href="https://www.linkedin.com/in/metin-%C3%B6zkaya-184603366/"
-                target="_blank"
-              >
-                <FaLinkedin size={22} className="hover:text-hover" />
-              </a>
+            <a
+              href="https://www.linkedin.com/in/metin-%C3%B6zkaya-184603366/"
+              target="_blank"
+            >
+              <FaLinkedin size={22} className="hover:text-hover" />
+            </a>
 
-              <a href="mailto:hello@klombe.com" className="underline">
-                <PiMailboxFill size={22} className="hover:text-hover" />
-              </a>
-            </div>
+            <a href="mailto:hello@klombe.com" className="underline">
+              <PiMailboxFill size={22} className="hover:text-hover" />
+            </a>
           </section>
         </div>
-        {/* alter to md */}
-        {/* {isOpen && window.innerWidth >= 1000 && (
-          <ProjectsConnector
-            {...{ buttonX, buttonY, divX, divTop, divWidth, divHeight }}
-          />
-        )}
-        {isOpen && <Projects columnRef={columnRef} />} */}
       </section>
       <MyFooter quote="So the day started poorly, thats no excuse to end it as such." />
     </>
