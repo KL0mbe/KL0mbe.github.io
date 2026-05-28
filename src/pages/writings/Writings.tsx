@@ -2,12 +2,10 @@ import PageLayout from "../../components/PageLayout";
 
 function Writings() {
   return (
-    <>
-      <PageLayout
-        title="Writings"
-        quote="to judge someone for what you yourself would have done, is to accept yourself inferior to your own standards"
-      />
-    </>
+    <PageLayout
+      title="Writings"
+      quote="Dont leave it to hindsight to wisen you up"
+    />
   );
 }
 

@@ -16,7 +16,6 @@ function PageLayout({ title, children, quote }: Props) {
 
   return (
     <>
-      {/* "dont leave it to hindsight to wisen you up" */}
       <main className="w-full px-4 py-16 md:py-32 min-h-screen">
         <div
           className="mx-auto max-w-5xl gap-x-2

@@ -5,35 +5,43 @@ function ProjectsList() {
     <>
       <ProjectCard
         title="Dit Samfund"
-        description="Website, App and Dashboard for organization to handle its events, members and payment logs."
+        description="Built website, app and dashboard from ground up to handle events, members and payment logs."
+        role="Lead Developer"
         date="3/26"
         url="https://ditsamfund.dk/"
+        stack="React | Typescript | Firebase"
       />
       <ProjectCard
         title="Staywired"
-        description="Website for the StayWired product integrated with full crud, checkout
-          and an admin dashboard for logistics."
+        description="Built website and admin dashboard from ground up. E-Commerce with checkout and logistics."
+        role="Lead Developer"
         date="12/25"
         url="https://www.staywired.dk"
+        stack="React | Typescript | Firebase"
       />
       <ProjectCard
         title="FullPowerKegels"
-        description="An App For developing your kegels with kegel excercises, primary maintainer"
+        description="Maintained and implemented new features for workout app while testing, pushing to prod and migrating user data."
+        role="Primary Maintainer"
         date="10/24-11/25"
         url="https://apps.apple.com/app/id6449595806"
+        stack="Flutter | Firebase"
       />
       <ProjectCard
         title="Ikast Fatih Camii"
-        description="Website for the mosque, member managamenet, payment tracking in dashboard as well
-            as front facing landing page for visistors to see coming events and services."
+        description="Built website and admin dashboard for the mosque, handling member management and payment tracking."
+        role="Lead Developer"
         date="11/25"
         url="https://www.ikastmoske.dk/"
+        stack="React | Typescript | Supabase"
       />
       <ProjectCard
         title="VibeAlign"
-        description="Meditation & Manifestation App. Primary developer, and maintainer for half a year"
+        description="Built app from ground up utilizing AI to take in user input and curate content for them."
+        role="Developer & Maintainer"
         date="5/25-9/25"
         url="https://apps.apple.com/app/id6746861813"
+        stack="Flutter | Firebase"
       />
     </>
   );

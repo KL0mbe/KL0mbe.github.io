@@ -10,9 +10,7 @@ function Home() {
     <>
       <section
         // probably change to the grid pagelayout
-        className="relative flex flex-col items-center min-h-screen
-        min-[1000px]:flex-row min-[1000px]:items-start min-[1000px]:justify-center 
-        max-md:px-8 py-15 md:py-30"
+        className=" flex min-h-screen justify-center max-md:px-4 py-15 md:py-30"
       >
         <div className="w-full max-w-160 text-left">
           <h1 className=" text-2xl">Metin Özkaya</h1>
@@ -87,7 +85,7 @@ function Home() {
           </section>
           <div className="mt-4">
             You can read more{" "}
-            <Link to="/about" className="hover:text-hover underline">
+            <Link to="/about" className="hover:text-hover underline ">
               about
             </Link>{" "}
             me or check out my{" "}
