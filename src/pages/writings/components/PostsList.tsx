@@ -28,53 +28,42 @@ function PostsList() {
     {},
   );
   return (
-    <>
-      <div className="text-left group">
-        {Object.entries(byYear)
-          .sort(([a], [b]) => Number(b) - Number(a))
-          .map(([year, entries]) => {
-            return (
-              <>
-                <div className="flex flex-col justify-between w-160">
-                  <div className="border-t border-secondary w-full"></div>
-                  <div className="flex justify-between">
-                    <div className="flex flex-col">
-                      {entries.map(({ slug, title, date }, index) => (
-                        <div className="">
-                          {/* <div className="border-t border-secondary w-full -mt-px"></div> */}
-
-                          <Link
-                            className="group/row"
-                            key={slug}
-                            to={`/writings/${slug}`}
-                            state={{ fromPage: "/writings" }}
-                          >
-                            <div className="w-120 flex justify-between group-hover/row:opacity-100!">
-                              <div className="py-4 pointer-events-none">
-                                {index === 0 && year}
-                              </div>
-
-                              <div className="does this one do anything? flex flex-col group-hover:opacity-50 group-hover/row:opacity-100! transition-opacity">
-                                <div className="flex w-60 py-4 justify-between">
-                                  <span>{title}</span>
-                                  <p className="text-textSecondary">{date}</p>
-                                </div>
-                              </div>
-                            </div>
-                            {index !== entries.length - 1 && (
-                              <div className="border-t border-secondary w-full justify-end"></div>
-                            )}
-                          </Link>
-                        </div>
-                      ))}
+    <div className="group max-w-160">
+      {Object.entries(byYear)
+        .sort(([a], [b]) => Number(b) - Number(a))
+        .map(([year, entries]) => {
+          return (
+            <div key={year} className="relative">
+              <div className="border-t border-secondary -mb-px"></div>
+              {entries.map(({ slug, title, date }, index) => (
+                <Link
+                  className="group/row"
+                  key={slug}
+                  to={`/writings/${slug}`}
+                  state={{ fromPage: "/writings" }}
+                >
+                  <div className="ml-[25%]">
+                    <div className="absolute top-1 left-0 text-sm text-textSecondary py-4 pl-2">
+                      {year}
+                    </div>
+                    <div className="w-full group-hover:opacity-50 group-hover/row:opacity-100! transition-opacity">
+                      <div
+                        className={`flex py-4 justify-between border-y border-secondary -mb-px pr-2 
+                          ${index === entries.length - 1 && "border-b-transparent"}`}
+                      >
+                        <p>{title}</p>
+                        <p className="text-textSecondary">
+                          {date.split("-")[2]}/{date.split("-")[1]}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </>
-            );
-          })}
-      </div>
-    </>
+                </Link>
+              ))}
+            </div>
+          );
+        })}
+    </div>
   );
 }
 

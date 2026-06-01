@@ -1,5 +1,5 @@
-import { useParams } from "react-router-dom";
 import PageLayout from "../../components/PageLayout";
+import { useParams } from "react-router-dom";
 
 const posts = import.meta.glob("./posts/*.mdx", { eager: true }) as Record<
   string,
@@ -21,7 +21,13 @@ function PostPage() {
         quote={post.frontmatter.quote ?? ""}
       >
         <div className="prose prose-invert">
-          {/* <p className="text-sm">{post.frontmatter.date}</p> */}
+          <p className="text-sm -mt-5">
+            {new Date(post.frontmatter.date).toLocaleDateString("en-GB", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
+          </p>
           <Content />
         </div>
       </PageLayout>

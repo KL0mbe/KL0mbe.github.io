@@ -1,4 +1,4 @@
-import ProjectsList from "../../../components/ProjectsList";
+import ProjectsList from "../../projects/components/ProjectsList";
 import { Link } from "react-router-dom";
 import { type RefObject } from "react";
 import { motion } from "motion/react";
