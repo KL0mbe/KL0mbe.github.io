@@ -26,7 +26,7 @@ function PageLayout({ title, children, quote }: Props) {
           <nav className="h-fit md:sticky md:top-32">
             <button
               onClick={() => navigate(fromPage)}
-              className="flex items-center w-17 gap-2
+              className="flex items-center gap-2
               hover:text-hover cursor-pointer"
             >
               <TbArrowBackUp size={14} />

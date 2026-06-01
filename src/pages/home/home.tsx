@@ -85,7 +85,7 @@ function Home() {
           </section>
           <div className="mt-4">
             You can read more{" "}
-            <Link to="/about" className="hover:text-hover underline ">
+            <Link to="/about" className="hover:text-hover underline">
               about
             </Link>{" "}
             me or check out my{" "}

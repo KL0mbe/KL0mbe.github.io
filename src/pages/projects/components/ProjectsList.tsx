@@ -1,4 +1,4 @@
-import ProjectCard from "../pages/projects/components/ProjectCard.tsx";
+import ProjectCard from "./ProjectCard.tsx";
 
 function ProjectsList() {
   return (

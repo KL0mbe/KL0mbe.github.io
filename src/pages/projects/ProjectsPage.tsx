@@ -1,4 +1,4 @@
-import ProjectsList from "../../components/ProjectsList";
+import ProjectsList from "./components/ProjectsList";
 import PageLayout from "../../components/PageLayout";
 
 function ProjectsPage() {
