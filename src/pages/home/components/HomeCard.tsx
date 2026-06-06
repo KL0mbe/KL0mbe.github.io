@@ -8,19 +8,15 @@ type Props = {
 
 function HomeCard({ title, description, url }: Props) {
   return (
-    <>
+    <div className="min-h-18">
       <a href={url} target="_blank">
-        <div className="group">
-          <div className="flex items-center gap-2 mt-4">
-            {title}
-            {url && (
-              <HiExternalLink size={18} className="group-hover:text-hover" />
-            )}
-          </div>
-          <h2 className="text-sm mt-2">{description}</h2>
+        <div className="flex hover:text-hover underline">
+          {title}
+          {url && <HiExternalLink size={18} />}
         </div>
       </a>
-    </>
+      <p className="text-textSecondary">{description}</p>
+    </div>
   );
 }
 

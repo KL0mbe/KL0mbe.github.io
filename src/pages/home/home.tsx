@@ -1,17 +1,14 @@
 import MyFooter from "../../components/MyFooter";
-import { HiExternalLink } from "react-icons/hi";
 import { PiMailboxFill } from "react-icons/pi";
 import { RxGithubLogo } from "react-icons/rx";
+import HomeCard from "./components/HomeCard";
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <>
-      <section
-        // probably change to the grid pagelayout
-        className=" flex min-h-screen justify-center max-md:px-4 py-15 md:py-30"
-      >
+      <section className=" flex min-h-screen justify-center max-md:px-4 py-15 md:py-30">
         <div className="w-full max-w-160 text-left">
           <h1 className=" text-2xl">Metin Özkaya</h1>
 
@@ -33,37 +30,26 @@ function Home() {
           >
             <div className="w-74 min-w-30">
               <Link to="/projects" className="hover:text-hover">
-                <div className="text-left underline">Projects</div>
+                <div className="text-left underline mb-6 flex flex-col">
+                  Projects
+                </div>
               </Link>
-              <div className="mt-6 flex flex-col [&_p]:text-textSecondary">
-                <div className="min-h-18">
-                  <a
-                    href="https://apps.apple.com/app/id6449595806"
-                    target="_blank"
-                  >
-                    <div className="flex underline hover:text-hover">
-                      Full Power kegels <HiExternalLink size={18} />
-                    </div>
-                  </a>
-                  <p>Excercise app(Maintainer)</p>
-                </div>
-                <div className="min-h-18">
-                  <a href="https://www.staywired.dk" target="_blank">
-                    <div className="flex underline hover:text-hover">
-                      StayWired <HiExternalLink size={18} />
-                    </div>
-                  </a>
-                  <p>E-Commerce site from scratch</p>
-                </div>
-                <div className="min-h-18">
-                  <a href="https://github.com/KL0mbe/AudiFile" target="_blank">
-                    <div className="flex underline hover:text-hover">
-                      AudiFile <HiExternalLink size={18} />
-                    </div>
-                  </a>
-                  <p>play and edit custom files with full control</p>
-                </div>
-              </div>
+
+              <HomeCard
+                title="Full Power Kegels"
+                description="Kegel Excercise app (Maintainer)"
+                url="https://apps.apple.com/app/id6449595806"
+              />
+              <HomeCard
+                title="StayWired"
+                description="E-Commerce site from scratch"
+                url="https://www.staywired.dk"
+              />
+              <HomeCard
+                title="AudiFile"
+                description="play and edit custom files with full control"
+                url="https://github.com/KL0mbe/AudiFile"
+              />
             </div>
 
             <div className="w-74 min-w-30">
@@ -71,15 +57,18 @@ function Home() {
                 Writings
               </Link>
               <div className="mt-6 flex flex-col">
-                <a href="#" className="min-h-18">
-                  The Tragedy of Not Having Cancer
-                </a>
-                <a href="#" className="min-h-18">
-                  Interacting with absolutely positioned divs
-                </a>
-                <a href="#" className="min-h-18">
-                  macOS Color Picker
-                </a>
+                <Link
+                  to="/writings/the-value-in-ripping-someone-off"
+                  className="min-h-18 hover:text-hover underline"
+                >
+                  The Value in Ripping Someone Off
+                </Link>
+                <Link
+                  to="/writings"
+                  className="min-h-18 hover:text-hover underline"
+                >
+                  All Writings
+                </Link>
               </div>
             </div>
           </section>

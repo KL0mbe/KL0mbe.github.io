@@ -15,7 +15,7 @@ function PostsList() {
         date: post.frontmatter.date,
       };
     })
-    .sort((a, b) => a.date.localeCompare(b.date));
+    .sort((a, b) => b.date.localeCompare(a.date));
 
   const byYear = entries.reduce<Record<string, typeof entries>>(
     (accumulator, entry) => {
@@ -37,8 +37,8 @@ function PostsList() {
               <div className="border-t border-secondary -mb-px"></div>
               {entries.map(({ slug, title, date }, index) => (
                 <Link
-                  className="group/row"
                   key={slug}
+                  className="group/row"
                   to={`/writings/${slug}`}
                   state={{ fromPage: "/writings" }}
                 >

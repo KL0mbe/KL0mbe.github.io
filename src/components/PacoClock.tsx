@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, useLayoutEffect } from "react";
 
-// refactor to not use any javascript
 function PacoClock() {
   const [time, setTime] = useState(new Date());
   const [hovered, setHovered] = useState(false);

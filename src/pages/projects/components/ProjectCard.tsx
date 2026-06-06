@@ -18,28 +18,26 @@ function ProjectCard({
   date,
 }: ProjectData) {
   return (
-    <>
-      <a href={url} target="_blank" rel="noopener noreferrer">
-        <div
-          className="text-left bg-accen p-4 mt-4 rounded-lg max-w-160 group
+    <a href={url} target="_blank">
+      <div
+        className="text-left bg-accen p-4 mt-4 rounded-lg max-w-160 group
         border border-secondary"
-        >
-          <div className="flex justify-between">
-            <span>{title}</span>
-            <div className="flex gap-4 ">
-              <p className="italic">{role}</p>
-              <p>{date}</p>
-            </div>
-          </div>
-          <p className="mt-2">{description}</p>
-
-          <div className="flex justify-between">
-            <p className="text-sm text-textSecondary">{stack}</p>
-            <HiExternalLink className="group-hover:text-hover" size={18} />
+      >
+        <div className="flex justify-between">
+          <span>{title}</span>
+          <div className="flex gap-4 ">
+            <p className="italic">{role}</p>
+            <p>{date}</p>
           </div>
         </div>
-      </a>
-    </>
+        <p className="mt-2">{description}</p>
+
+        <div className="flex justify-between">
+          <p className="text-sm text-textSecondary">{stack}</p>
+          <HiExternalLink className="group-hover:text-hover" size={18} />
+        </div>
+      </div>
+    </a>
   );
 }
 

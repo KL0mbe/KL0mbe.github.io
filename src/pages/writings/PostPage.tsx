@@ -12,7 +12,12 @@ const posts = import.meta.glob("./posts/*.mdx", { eager: true }) as Record<
 function PostPage() {
   const { slug } = useParams();
   const post = posts[`./posts/${slug}.mdx`];
-  if (!post) return <p> No Such Post </p>;
+  if (!post)
+    return (
+      <PageLayout title="Wrong Turn" quote="No quotes for wrong routes">
+        <p> No Such Post </p>
+      </PageLayout>
+    );
   const Content = post.default;
   return (
     <div className=" text-left">
@@ -20,7 +25,7 @@ function PostPage() {
         title={post.frontmatter.title ?? ""}
         quote={post.frontmatter.quote ?? ""}
       >
-        <div className="prose prose-invert">
+        <div className="prose prose-invert leading-snug text-textPrimary">
           <p className="text-sm -mt-5">
             {new Date(post.frontmatter.date).toLocaleDateString("en-GB", {
               day: "numeric",
