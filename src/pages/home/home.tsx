@@ -2,6 +2,7 @@ import MyFooter from "../../components/MyFooter";
 import { PiMailboxFill } from "react-icons/pi";
 import { RxGithubLogo } from "react-icons/rx";
 import HomeCard from "./components/HomeCard";
+import { HeaderDescription } from "../about/AboutPage";
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -13,13 +14,7 @@ function Home() {
           <h1 className=" text-2xl">Metin Özkaya</h1>
 
           <h2 className=" mt-8 whitespace-normal">
-            Designing Websites, developing apps and Hello Worlding since 2023.
-            <br />
-            <br />
-            I've built and maintained multiple mobile apps, E-commerce websites
-            and most importantly of all personal projects. currently developing
-            websites for companies, with focus on admin dashboard and database
-            integration
+            <HeaderDescription />
             <Link to="/about" className="hover:text-hover">
               ...
             </Link>
@@ -64,10 +59,16 @@ function Home() {
                   The Value in Ripping Someone Off
                 </Link>
                 <Link
-                  to="/writings"
+                  to="/writings/migrate-your-damn-db's"
                   className="min-h-18 hover:text-hover underline"
                 >
-                  All Writings
+                  Migrate Your Damn DB's
+                </Link>
+                <Link
+                  to="/keyboards"
+                  className="min-h-18 hover:text-hover underline"
+                >
+                  (Beta) Keyboard Character Lookup
                 </Link>
               </div>
             </div>

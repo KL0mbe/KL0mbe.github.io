@@ -1,6 +1,28 @@
 import PageLayout from "../../components/PageLayout";
 import { Link } from "react-router-dom";
 
+export function HeaderDescription() {
+  return (
+    <>
+      Designing Websites, developing apps and Hello Worlding since 2023.
+      <br />
+      <br />
+      I've built and maintained multiple mobile apps, E-commerce websites and
+      most importantly of all personal projects. Currently developing a keyboard
+      character lookup built on Postgres for finding how to type any given
+      character on 200+ layouts across Windows and macOS. You can check out the
+      beta{" "}
+      <Link
+        to="/keyboards"
+        // state={{ fromPage: "/about" }}
+        className="hover:text-hover underline"
+      >
+        here
+      </Link>
+    </>
+  );
+}
+
 function AboutPage() {
   return (
     <PageLayout
@@ -9,13 +31,7 @@ function AboutPage() {
     >
       <div className="mt-8 text-left">
         <p>
-          Designing Websites, developing apps and Hello Worlding since 2023.
-          <br />
-          <br />
-          I've built and maintained multiple mobile apps, E-commerce websites
-          and most importantly of all personal projects. currently developing
-          websites for companies, with focus on admin dashboard and database
-          integration
+          <HeaderDescription />
           <br />
           <br />I started off self taught through small games and apps. just out
           of pure curiosity for how these complex machines worked. ill never

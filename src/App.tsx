@@ -1,4 +1,5 @@
 import ProjectsPage from "./pages/projects/ProjectsPage";
+import Keyboards from "./pages/keyboards/keyboards";
 import ResumePage from "./pages/resume/ResumePage";
 import { Route, Routes } from "react-router-dom";
 import Writings from "./pages/writings/Writings";
@@ -12,6 +13,7 @@ function App() {
     <Routes>
       <Route path="/writings/:slug" element={<PostPage />} />
       <Route path="/projects" element={<ProjectsPage />} />
+      <Route path="/keyboards" element={<Keyboards />} />
       <Route path="/writings" element={<Writings />} />
       <Route path="/resume" element={<ResumePage />} />
       <Route path="/about" element={<AboutPage />} />

@@ -1,0 +1,31 @@
+---
+title: Migrate Your Damn DB's
+quote: Do not leave it to hindsight to wisen you up
+date: 2026-09-15
+---
+
+"To forego migration is to forego an ever needed skill, in favor of a moments ease"
+
+Let me paint you a picture. Your working on a personal project, just scribbling along, 
+doing a fine and dandy job and using sql of course because your not insane.
+
+Then as you move along you realize that one table you thought was done really needs 
+another column, and actually that column shouldnt hold a string it should probably be 
+an int and hold a FK to another table.
+
+So you do what we all do and `DROP SCHEMA public CASCADE;` write you new schema, 
+pop it in and re seed. But this is a luxury; not taken for granted but taken advantage of. 
+It is not that theres anything wrong with quickly dumping your bad schema and popping 
+in the updated one. It is that, that will never happen in production ever. You know that 
+when your out actually putting in the work you will have to migrate to the new schema 
+to maintain the data in the DB.
+
+Why not take advantage of the oppertunity to put in the kilometers and migrate your 
+tables when you come across your own incompetence in writing a schema. Because you 
+don't get better at running by driving to the finish line, you don't improve your 
+cooking by ordering take out and you dont learn to migrate by dropping your tables.
+
+just Migrate Your Damn DB's and prep yourself for the real world. To forego migration is 
+to forego an ever needed skill, in favor of a moments ease. And it will be but a moment,
+because if you ever do end up dropping tables in the real world. You will find that most 
+companies will be just as quick to drop the slacker who did it.

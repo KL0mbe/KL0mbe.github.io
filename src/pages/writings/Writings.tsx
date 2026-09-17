@@ -3,10 +3,7 @@ import PostsList from "./components/PostsList";
 
 function Writings() {
   return (
-    <PageLayout
-      title="Writings"
-      quote="Dont leave it to hindsight to wisen you up"
-    >
+    <PageLayout title="Writings" quote="fate has a habit of following us all">
       <PostsList></PostsList>
     </PageLayout>
   );

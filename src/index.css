@@ -14,3 +14,12 @@
     --color-accent: #1e1f24;
     --color-hover: #8ec5ff;
 }
+
+.prose code::before,
+.prose code::after{
+    content: "";
+}
+.prose code {
+  color: #D4807E;
+  /* background-color: #212122; */
+}
