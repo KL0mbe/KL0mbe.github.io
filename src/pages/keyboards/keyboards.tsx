@@ -55,6 +55,7 @@ function Keyboards() {
   const [country, setCountry] = useState("X");
   const [searchedCountry, setSearchedCountry] = useState("");
   const [searched, setSearched] = useState(false);
+  const [connectionError, setConnectionError] = useState(false);
 
   const [countries, setCountries] = useState<Country[]>([]);
   const [result, setResult] = useState<ComboResponse>({
@@ -64,9 +65,15 @@ function Keyboards() {
 
   useEffect(() => {
     async function loadCountries() {
-      const response = await fetch("http://localhost:8080/countries");
-      const data = await response.json();
-      setCountries(data);
+      setConnectionError(false);
+      try {
+        const response = await fetch("http://localhost:8080/countries");
+        if (!response.ok) throw new Error("bad Response");
+        const data = await response.json();
+        setCountries(data);
+      } catch {
+        setConnectionError(true);
+      }
     }
     loadCountries();
   }, []);
@@ -82,6 +89,7 @@ function Keyboards() {
     setCountry(e.target.value);
 
   async function getKeyCombo(char: string, country: string) {
+    setConnectionError(false);
     setSearchedChar(char);
     setSearchedCountry(country);
     setSearched(true);
@@ -151,7 +159,7 @@ function Keyboards() {
           </button>
         </div>
 
-        {!searched && (
+        {connectionError && (
           <div className="mx-auto w-fit p-4 rounded mt-10 text-left bg-red-400">
             <p>
               Server is down for rewrites. You can check out the repo{" "}
