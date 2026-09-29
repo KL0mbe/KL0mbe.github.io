@@ -67,7 +67,7 @@ function Keyboards() {
     async function loadCountries() {
       setConnectionError(false);
       try {
-        const response = await fetch("http://localhost:8080/countries");
+        const response = await fetch("https:/api.klombe.com/countries");
         if (!response.ok) throw new Error("bad Response");
         const data = await response.json();
         setCountries(data);
@@ -95,7 +95,7 @@ function Keyboards() {
     setSearched(true);
 
     const request = await fetch(
-      `http://localhost:8080/?char=${encodeURIComponent(char)}&country=${encodeURIComponent(country)}`,
+      `https://api.klombe.com/?char=${encodeURIComponent(char)}&country=${encodeURIComponent(country)}`,
     );
     const data = await request.json();
     setResult(data);
