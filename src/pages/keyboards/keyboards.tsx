@@ -67,7 +67,7 @@ function Keyboards() {
     async function loadCountries() {
       setConnectionError(false);
       try {
-        const response = await fetch("https:/api.klombe.com/countries");
+        const response = await fetch("https://api.klombe.com/countries");
         if (!response.ok) throw new Error("bad Response");
         const data = await response.json();
         setCountries(data);
